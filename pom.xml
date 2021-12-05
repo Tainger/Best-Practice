@@ -17,6 +17,9 @@
         <module>designpattern</module>
         <module>java</module>
         <module>leetcode</module>
+        <module>Seata</module>
+        <module>nacos</module>
+        <module>datastruct</module>
     </modules>
 
     <parent>
