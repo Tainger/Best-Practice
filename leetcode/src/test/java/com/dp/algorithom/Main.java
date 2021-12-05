@@ -200,6 +200,54 @@ public class Main {
         int dp = package01Test.dp(w, v, N, W);
         System.out.println(dp);
     }
+
+
+    /**
+     * 08 第八章
+     */
+
+    /**
+     * 08 回文串的个数
+     */
+    @Test
+    public void Demo08huiwen() {
+        Demo08huiwen demo08huiwen = new Demo08huiwen();
+        int abccccdd = demo08huiwen.countSubstrings("abccccdd");
+        System.out.println(abccccdd);
+    }
+
+
+    /**
+     * 08 回文串的长度
+     */
+    @Test
+    public void Demo08huiwenLength() {
+        Demo08huiwenMaxLength demo08huiwenMaxLength = new Demo08huiwenMaxLength();
+        int length = demo08huiwenMaxLength.countSubstrings("abccccdd");
+        System.out.println(length);
+    }
+
+    /**
+     * 08 最长子回文串
+     */
+    @Test
+    public void Demo08huiwenString() {
+        Demo08huiwenMaxString demo08huiwenMaxString = new Demo08huiwenMaxString();
+        String babad = demo08huiwenMaxString.longestPalindrome("babad");
+        System.out.println(babad);
+    }
+
+
+    /**
+     * 08 最大子数组之和
+     */
+    @Test
+    public void Demo08MaxSubArray() {
+        Demo08MaxSubArray demo08MaxSubArray = new Demo08MaxSubArray();
+        int res = demo08MaxSubArray.maxSubArray(new int[] {-2,1});
+        System.out.println(res);
+    }
+
 }
 
 

@@ -46,6 +46,7 @@ public class Package01Test {
 
     /*
      * tn: traversed n,即已经遍历过的物品;  * rw: reserved w,即背包还能容量的重量。
+     * w[tn] 对应商品的重量， v[tn]对应商品的价值
      */
     public int DP(int tn, int rw) {
         // 当遍历完所有物品时,就该返回 0 了,因为没有物品也就没有价值了
