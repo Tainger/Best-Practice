@@ -2,10 +2,7 @@ package com.yg.edu.atomic.unsafe;
 
 import java.util.concurrent.locks.StampedLock;
 
-/**
- * @author jiazhiyuan
- * @date 2021/10/31 12:27 上午
- */
+
 public class loadFenceDemo {
 
     static public  class  Point{

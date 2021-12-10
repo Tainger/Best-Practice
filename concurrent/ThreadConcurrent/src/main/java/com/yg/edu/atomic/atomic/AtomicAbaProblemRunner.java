@@ -5,13 +5,6 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.LockSupport;
 
-/**
- * @author ：图灵-杨过
- * @date：2019/8/2
- * @version: V1.0
- * @slogan: 天下风云出我辈，一入代码岁月催
- * @description :
- */
 @Slf4j
 public class AtomicAbaProblemRunner {
     static AtomicInteger atomicInteger = new AtomicInteger(1);

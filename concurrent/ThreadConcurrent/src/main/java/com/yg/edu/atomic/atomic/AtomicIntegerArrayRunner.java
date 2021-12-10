@@ -2,13 +2,7 @@ package com.yg.edu.atomic.atomic;
 
 import java.util.concurrent.atomic.AtomicIntegerArray;
 
-/**
- * @author ：图灵-杨过
- * @date：2019/7/14
- * @version: V1.0
- * @slogan: 天下风云出我辈，一入代码岁月催
- * @description :
- */
+
 public class AtomicIntegerArrayRunner {
 
     static int[] value = new int[]{1,2};
