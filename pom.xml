@@ -20,6 +20,14 @@
         <module>Seata</module>
         <module>nacos</module>
         <module>datastruct</module>
+        <module>nio</module>
+        <module>bio</module>
+        <module>aqs</module>
+        <module>hive</module>
+        <module>kettel</module>
+        <module>zookeeper</module>
+        <module>mybatis</module>
+        <module>Mybatis-plus</module>
     </modules>
 
     <parent>

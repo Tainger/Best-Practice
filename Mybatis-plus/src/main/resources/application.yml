@@ -1,0 +1,37 @@
+server:
+  jetty:
+    threads:
+      acceptors: 4
+      selectors: 8
+  port: 8090
+  servlet:
+    context-path: /mybatis
+    multipart:
+      max-request-size: 10MB
+      max-file-size: 2MB
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/best_practice?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&nullCatalogMeansCurrent=true
+      username: root
+      password: jia19971210
+      initial-size: 2
+      max-active: 4
+      min-idle: 4
+      max-wait: 60000
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+
+mybatis-plus:
+  # 扫描mapper.xml文件
+  mapper-locations: classpath*:mapper/*Mapper.xml
+  # 主键类型
+  global-config:
+    banner: false
+  #自定义SQL注入器
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: true
