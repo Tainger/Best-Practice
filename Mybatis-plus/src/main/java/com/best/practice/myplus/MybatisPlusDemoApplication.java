@@ -3,6 +3,7 @@ package com.best.practice.myplus;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
  * @author jiazhiyuan
@@ -14,7 +15,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class MybatisPlusDemoApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MybatisPlusDemoApplication.class, args);
+        AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext();
+        applicationContext.close();
     }
 }
 

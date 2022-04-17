@@ -1,0 +1,20 @@
+server:
+  port: 8090
+  forward-headers-strategy: native
+  error:
+    include-message: always
+spring:
+  devtools:
+    restart:
+      eanbled: false
+  mvc:
+    pathmatch:
+      use-suffix-pattern: true
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+  output:
+    ansi:
+      enabled: always
+
+test:
+  collection-executor: 1

@@ -5,4 +5,11 @@
 <mapper namespace="com.best.practice.myplus.mapper.UserMapper">
 
 
+    <select id="selectUserCount" resultType="java.util.Map">
+
+        select
+
+    </select>
+
+
 </mapper>

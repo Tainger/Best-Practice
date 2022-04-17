@@ -28,6 +28,9 @@
         <module>zookeeper</module>
         <module>mybatis</module>
         <module>Mybatis-plus</module>
+        <module>websocket</module>
+        <module>jdk1.8</module>
+        <module>Spring</module>
     </modules>
 
     <parent>
@@ -60,12 +63,6 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.20</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>2.0.0-alpha1</version>
         </dependency>
 
         <dependency>
