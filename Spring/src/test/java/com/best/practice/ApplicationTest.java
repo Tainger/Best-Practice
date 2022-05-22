@@ -3,6 +3,7 @@ package com.best.practice;
 import com.best.practice.bean.RegisterTaskProcessor;
 import com.best.practice.bean.User;
 import com.best.practice.beaninit.MyBeanPostProcessor;
+import com.best.practice.context.UserContext;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,19 +29,11 @@ public class ApplicationTest {
     private User user;
 
     @Autowired
-    private MyBeanPostProcessor myBeanPostProcessor;
+    private UserContext userContext;
 
     @Test()
     public void testContext() {
-        Map<Integer, RegisterTaskProcessor> registerContext = myBeanPostProcessor.getRegisterContext();
-
-        for (Map.Entry<Integer, RegisterTaskProcessor> integerRegisterTaskProcessorEntry : registerContext.entrySet()) {
-            RegisterTaskProcessor registerTaskProcessor = integerRegisterTaskProcessorEntry.getValue();
-
-            registerTaskProcessor.register();
-            registerTaskProcessor.doCall();
-        }
-//        user.getAge();
-//        System.out.println(user.getUserName());
+        Map<Integer, RegisterTaskProcessor> registerContext = userContext.getRegisterContext();
+        System.out.println(registerContext);
     }
 }

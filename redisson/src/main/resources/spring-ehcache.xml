@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:cache="http://www.springframework.org/schema/cache"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/cache
+http://www.springframework.org/schema/cache/spring-cache-4.0.xsd">
+
+
+    <bean id="ehCacheManager" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+
+        <property name="configLocation" value="classpath:ehcache.xml">
+
+        </property>
+    </bean>
+
+
+    <bean id="ehCacheCacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager">
+
+        <property name="cacheManager" ref="ehCacheManager">
+
+        </property>
+
+        <!--  数据库失败，缓存删除    -->
+        <property name="transactionAware" value="true">
+
+        </property>
+    </bean>
+
+
+    <cache:annotation-driven proxy-target-class="true" cache-manager="ehCacheCacheManager"/>
+
+
+
+    <bean id="userService" class="com.redission.service.impl.UserServiceImpl"></bean>
+
+
+
+
+</beans>

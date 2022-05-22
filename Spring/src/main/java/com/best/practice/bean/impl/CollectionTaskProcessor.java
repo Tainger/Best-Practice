@@ -2,7 +2,6 @@ package com.best.practice.bean.impl;
 
 import com.best.practice.annotation.TaskType;
 import com.best.practice.bean.AbstractRegisterTaskProcessor;
-import com.best.practice.bean.RegisterTaskProcessor;
 import org.springframework.beans.factory.annotation.Value;
 
 /**

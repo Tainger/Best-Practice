@@ -31,6 +31,7 @@
         <module>websocket</module>
         <module>jdk1.8</module>
         <module>Spring</module>
+        <module>redisson</module>
     </modules>
 
     <parent>
@@ -46,7 +47,6 @@
     </properties>
 
     <dependencies>
-
 
         <dependency>
             <groupId>org.openjdk.jol</groupId>

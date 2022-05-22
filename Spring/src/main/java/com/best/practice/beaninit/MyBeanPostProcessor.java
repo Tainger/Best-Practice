@@ -2,25 +2,23 @@ package com.best.practice.beaninit;
 
 import com.best.practice.annotation.TaskType;
 import com.best.practice.bean.RegisterTaskProcessor;
+import com.best.practice.context.UserContext;
 import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.core.Ordered;
-import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
-
-import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @author jiazhiyuan
  * @date 2022/4/16 5:38 下午
  */
-
 @Component
 public class MyBeanPostProcessor implements BeanPostProcessor, Ordered {
 
-    private final Map<Integer, RegisterTaskProcessor> registerContext = new ConcurrentHashMap();
+    @Autowired
+   private UserContext userContext;
 
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
@@ -34,6 +32,7 @@ public class MyBeanPostProcessor implements BeanPostProcessor, Ordered {
 
             TaskType annotation = bean.getClass().getAnnotation(TaskType.class);
             if(null != annotation) {
+                Map<Integer, RegisterTaskProcessor> registerContext = userContext.getRegisterContext();
                 int type = annotation.type();
                 RegisterTaskProcessor registerTaskProcessor = (RegisterTaskProcessor) bean;
                 registerContext.put(type, registerTaskProcessor);
@@ -45,9 +44,6 @@ public class MyBeanPostProcessor implements BeanPostProcessor, Ordered {
     }
 
 
-    public Map<Integer, RegisterTaskProcessor> getRegisterContext() {
-        return registerContext;
-    }
 
     //定义执行顺序
     @Override

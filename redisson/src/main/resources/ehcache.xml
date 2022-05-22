@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="ehcache.xsd">
+
+
+<!--    &lt;!&ndash; 默认缓存 &ndash;&gt;-->
+<!--    <defaultCache maxElementsInMemory="1000" eternal="true"-->
+<!--                  timeToIdleSeconds="120" timeToLiveSeconds="120" overflowToDisk="true"-->
+<!--                  diskSpoolBufferSizeMB="30" maxElementsOnDisk="10000000"-->
+<!--                  diskPersistent="true" diskExpiryThreadIntervalSeconds="120"-->
+<!--                  memoryStoreEvictionPolicy="LRU">-->
+<!--    </defaultCache>-->
+<!--    -->
+    <diskStore path="java.io.tmpdir"/>
+
+
+    <!--
+        当cache中的元素个数=maxEntriesLocalHeaps时，
+    -->
+<!--    <defaultCache-->
+<!--        maxElementsInMemory="10000"-->
+<!--        eternal="false"-->
+<!--        timeToIdleSeconds="120"-->
+<!--        timeToLiveSeconds="120"-->
+<!--        maxElementsOnDisk="10000000"-->
+<!--        diskExpiryThreadIntervalSeconds="120"-->
+<!--        memoryStoreEvictionPolicy="LRU"-->
+<!--        >-->
+
+<!--        <persistence strategy="localTempSwap"/>-->
+
+<!--    </defaultCache>-->
+
+
+    <!--
+    maxElementsInMemory 内存最多放多少个元素
+    external true  不过期
+    memoryStoreEvictionPolicy 内存过期策略
+    timeToLiveSeconds 可以闲置多长时间
+    timeToIdleSeconds 从创建开始可以活多长时间
+    maxElementsOnDisk LocalTempSwap时有效，表示最多可以往磁盘写多少个
+    diskExpiryThreadIntervalSeconds  磁盘元素是否过期的时间间隔
+    memoryStoreEvictionPolicy  淘汰策略
+    statistics 统计
+    -->
+    <cache name="user_cache"
+           maxEntriesLocalHeap="1000"
+           eternal="false"
+           timeToLiveSeconds="600"
+           timeToIdleSeconds="600"
+           maxElementsOnDisk="10000000"
+           diskExpiryThreadIntervalSeconds="120"
+           memoryStoreEvictionPolicy="LRU"
+           statistics="true"
+    >
+
+
+    <!--        -->
+<!--    <persistence strategy="none"/>-->
+
+        <persistence strategy="none"/>
+    </cache>
+
+
+
+
+
+</ehcache>
