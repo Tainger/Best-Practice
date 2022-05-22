@@ -38,10 +38,10 @@ public class SpringBootEhcacheTest {
 
         System.out.println(cacheManager.getClass());
 
-//        User user = userService.getById(33L);
-//        System.out.println(user);
-//        System.out.println(userService.getById(33L));
-//        System.out.println(userService.getById(33L));
+        User user = userService.getById(33L);
+        System.out.println(user);
+        System.out.println(userService.getById(33L));
+        System.out.println(userService.getById(33L));
 
     }
 }
