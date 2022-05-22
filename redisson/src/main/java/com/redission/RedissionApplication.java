@@ -3,6 +3,7 @@ package com.redission;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.cache.annotation.EnableCaching;
 
 import javax.sql.DataSource;
 
@@ -12,6 +13,7 @@ import javax.sql.DataSource;
  */
 
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
+@EnableCaching
 public class RedissionApplication {
 
     public static void main(String[] args) {

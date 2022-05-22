@@ -27,15 +27,21 @@ public class SpringBootEhcacheTest {
     private UserService userService;
 
 
+    /*
+    *
+    * 1. 在yaml 文件中配置eacheCache 缓存
+    *
+    * 2. enable Caching 注解
+    * */
     @Test
     public void test1() {
 
         System.out.println(cacheManager.getClass());
 
-        User user = userService.getById(1L);
-        System.out.println(user);
-        System.out.println(userService.getById(33L));
-        System.out.println(userService.getById(33L));
+//        User user = userService.getById(33L);
+//        System.out.println(user);
+//        System.out.println(userService.getById(33L));
+//        System.out.println(userService.getById(33L));
 
     }
 }
