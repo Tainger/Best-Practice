@@ -16,7 +16,7 @@ public class CallableDemo {
         Callable callable = new Callable() {
             @Override
             public Object call() throws Exception {
-                Thread.sleep(1000);
+                Thread.sleep(10000);
                 System.out.println("我在操作");
                 return "我执行了";
             }

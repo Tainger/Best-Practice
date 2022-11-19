@@ -32,6 +32,10 @@
         <module>jdk1.8</module>
         <module>Spring</module>
         <module>redisson</module>
+        <module>telegram-api</module>
+        <module>easy-es</module>
+        <module>demoSpringTransaction</module>
+        <module>demo001SpringTransaction01</module>
     </modules>
 
     <parent>

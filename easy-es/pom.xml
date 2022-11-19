@@ -9,19 +9,18 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>netty</artifactId>
+    <artifactId>easy-es</artifactId>
 
     <properties>
-
         <maven.compiler.source>12</maven.compiler.source>
         <maven.compiler.target>12</maven.compiler.target>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>io.netty</groupId>
-            <artifactId>netty-all</artifactId>
-            <version>4.1.48.Final</version>
+            <groupId>io.github.xpc1024</groupId>
+            <artifactId>easy-es-boot-starter</artifactId>
+            <version>0.9.20</version>
         </dependency>
     </dependencies>
 

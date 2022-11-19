@@ -15,6 +15,8 @@ public class RetrantLockDemo {
 
 
     public void add() {
+
+        Object
         for (int i = 0; i < 100000; i++) {
             lock.lock();
             count++;
@@ -30,6 +32,7 @@ public class RetrantLockDemo {
             Thread thread = new Thread(retrantLockDemo::add);
             thread.start();
         }
+        Lock lock = new Re
 
     }
 

@@ -50,10 +50,10 @@ public class ReflectionDemo {
 
     public static void main(String[] args) {
 
-        ReflectionDemo reflectionDemo = new ReflectionDemo();
-        reflectionDemo.setAge(13);
-        reflectionDemo.setName();
-        Field[] fields = reflectionDemo.getClass().getFields();
+//        ReflectionDemo reflectionDemo = new ReflectionDemo();
+//        reflectionDemo.setAge(13);
+//        reflectionDemo.setName();
+//        Field[] fields = reflectionDemo.getClass().getFields();
 
 
     }

@@ -10,6 +10,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>jvm</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>oom-error-demo</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>12</maven.compiler.source>

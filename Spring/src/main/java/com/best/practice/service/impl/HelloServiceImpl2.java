@@ -11,6 +11,11 @@ public class HelloServiceImpl2 implements HelloService {
     public void sayHello() {
         System.out.println("你好我是HelloServiceImpl2");
     }
+
+    @Override
+    public String testNotNull() {
+        return null;
+    }
 }
 
 

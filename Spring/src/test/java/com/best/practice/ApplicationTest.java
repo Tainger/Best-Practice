@@ -4,12 +4,14 @@ import com.best.practice.bean.RegisterTaskProcessor;
 import com.best.practice.bean.User;
 import com.best.practice.beaninit.MyBeanPostProcessor;
 import com.best.practice.context.UserContext;
+import com.best.practice.service.HelloService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import javax.annotation.Resource;
 import java.util.Map;
 
 /**
@@ -28,12 +30,17 @@ public class ApplicationTest {
     @Autowired(required = true)
     private User user;
 
-    @Autowired
-    private UserContext userContext;
+    @Resource
+    private HelloService helloService;
 
     @Test()
     public void testContext() {
-        Map<Integer, RegisterTaskProcessor> registerContext = userContext.getRegisterContext();
-        System.out.println(registerContext);
+
+    }
+
+
+    @Test()
+    public void testContext2() {
+        helloService.testNotNull();
     }
 }
